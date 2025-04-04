@@ -7,11 +7,11 @@ from sklearn.preprocessing import LabelEncoder
 
 # Load the dataset
 df = pd.read_csv("vgchartz-2024.csv")  
-
 df_sample = df.sample(n=10000, random_state=42).reset_index(drop=True)
 
-# Implement a loop to categorize games based on their total sales into "Low," "Medium," and "High" sales groups.
 
+
+# Implement a loop to categorize games based on their total sales into "Low," "Medium," and "High" sales groups.
 def categorize_sales(sales):
     if sales > 5:
         return 'High'
