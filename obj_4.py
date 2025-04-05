@@ -11,7 +11,10 @@ df = pd.read_csv("vgchartz-2024.csv")  # Replace with actual file path
 # Extract a random sample of 10,000 rows
 df_sample = df.sample(n=10000, random_state=42).reset_index(drop=True)
 
-
+# To clean, analyze, and visualize the video game dataset by handling missing values, computing regional sales contributions, 
+# summary statistics, and correlations. The project also includes identifying top-selling games, analyzing genre and publisher relationships, 
+# detecting outliers, 
+# and creating visualizations such as bar charts, histograms, scatter plots, pie charts, box plots, and heatmaps.
 
 # Bar chart: Total sales of top 5 publishers (Objective 11)
 plt.figure(figsize=(10,5))
@@ -49,17 +52,3 @@ sns.heatmap(df_sample.corr(), annot=True, cmap='coolwarm', fmt='.2f')
 plt.title('Feature Correlation Heatmap')
 plt.show()
 
-
-
-# Create a bar chart to visualize the total sales of the top 5 publishers.
-
-# Plot a histogram of critic scores to understand their distribution.
-
-# Use a scatter plot to analyze the relationship between critic score and total sales.
-
-# Create a pie chart showing the proportion of sales from different regions (NA, JP, PAL, Other).
-
-
-# Use Seaborn's heatmap to visualize the correlation between numerical features.
-
-# 
