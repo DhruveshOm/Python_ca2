@@ -59,6 +59,7 @@ sns.histplot(df_sample['critic_score'], bins=20, kde=True)
 plt.title('Distribution of Critic Scores')
 plt.show()
 
+
 # Scatter plot: Critic Score vs Total Sales
 plt.figure(figsize=(8,5))
 sns.scatterplot(x=df_sample['critic_score'], y=df_sample['total_sales'], alpha=0.5)
