@@ -17,11 +17,11 @@ identifying outliers in total sales, analyzing the correlation between critic sc
 exploring the distribution of game genres, and examining the relationship between genres and publishers using a chi-square test.
 
 
-# Summary statistics (Objective 16)
+# Summary statistics 
 print(df_sample.describe())
 
 
-# Box plot: Outliers in total sales (Objective 17)
+# Box plot: Outliers in total sales 
 plt.figure(figsize=(8,5))
 sns.boxplot(y=df_sample['total_sales'])
 plt.title('Outliers in Total Sales')
@@ -33,14 +33,14 @@ corr_value = df_sample['critic_score'].corr(df_sample['total_sales'])
 print(f"Correlation between Critic Score and Total Sales: {corr_value:.2f}")
 
 
-# Most common genres (Objective 19)
+# Most common genres 
 df_sample['genre'].value_counts().plot(kind='bar', color='orange')
 plt.title('Most Common Game Genres')
 plt.xlabel('Genre')
 plt.ylabel('Count')
 plt.show()
 
-# Chi-square test: Relationship between genre and publisher (Objective 20)
+# Chi-square test: Relationship between genre and publisher 
 contingency_table = pd.crosstab(df_sample['genre'], df_sample['publisher'])
 chi2, p, dof, expected = stats.chi2_contingency(contingency_table)
 print(f"Chi-square test result: chi2={chi2:.2f}, p-value={p:.5f}")
