@@ -6,7 +6,7 @@ from scipy import stats
 from sklearn.preprocessing import LabelEncoder
 
 # Load the dataset
-df = pd.read_csv("vgchartz-2024.csv")  # Replace with actual file path
+df = pd.read_csv("vgchartz-2024.csv")  # Replace with actual file pat
 
 # Extract a random sample of 10,000 rows
 df_sample = df.sample(n=10000, random_state=42).reset_index(drop=True)
