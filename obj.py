@@ -90,21 +90,8 @@ plt.ylabel('Count')
 plt.tight_layout()
 plt.show()
 
-
 # -----------------------------------------
-# Objective 7: Compare Total Sales between Action and Shooter Genres (t-test)
-# -----------------------------------------
-
-action_sales = df_sample[df_sample['genre'] == 'Action']['total_sales']
-shooter_sales = df_sample[df_sample['genre'] == 'Shooter']['total_sales']
-if len(action_sales) > 0 and len(shooter_sales) > 0:
-    t_stat, p_val = ttest_ind(action_sales, shooter_sales, equal_var=False)
-    print(f"T-Test: t-statistic = {t_stat:.3f}, p-value = {p_val:.5f}")
-else:
-    print("Not enough data for one or both genres for t-test.")
-
-# -----------------------------------------
-#   objective 8: Model Game Launch Frequency Per Year (Using a Bar Chart)
+#   objective 7: Model Game Launch Frequency Per Year (Using a Bar Chart)
 # -----------------------------------------
 df_sample['year'] = df_sample['release_date'].dt.year
 year_counts = df_sample['year'].value_counts().sort_index()
