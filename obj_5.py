@@ -1,9 +1,7 @@
-# -----------------------------------------
-# Objective 5: Identify outliers in total sales.
-# -----------------------------------------
-# Box plot:
-plt.figure(figsize=(8, 5))
-sns.boxplot(y=df_sample['total_sales'], color='violet')
-plt.title('Outliers in Total Sales')
+# Heatmap: Correlation between numerical features (select only numeric columns).
+plt.figure(figsize=(8, 6))
+numeric_cols = df_sample.select_dtypes(include=np.number)
+sns.heatmap(numeric_cols.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Feature Correlation Heatmap')
 plt.tight_layout()
 plt.show()
